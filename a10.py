@@ -140,7 +140,8 @@ def polar_radius(matches: List[str]) -> List[str]:
     """
     return [get_polar_radius(matches[0])]
 
-
+def population_size(matches: List[str]) -> List[str]:
+    return [get]
 # dummy argument is ignored and doesn't matter
 def bye_action(dummy: List[str]) -> None:
     raise KeyboardInterrupt
@@ -156,6 +157,9 @@ Action = Callable[[List[str]], List[Any]]
 pa_list: List[Tuple[Pattern, Action]] = [
     ("when was % born".split(), birth_date),
     ("what is the polar radius of %".split(), polar_radius),
+    ("what is the population of %" .split(), population_size),
+    ("what is the capital of %" .split(), capital),
+    ("how much money did % make" .split(), movie_gross),
     (["bye"], bye_action),
 ]
 
